@@ -30,7 +30,7 @@ import {
   UserPlus,
   Copy,
 } from "lucide-react";
-import logoAsset from "@/assets/quranhubb-logo.png.asset.json";
+import { QURANHUBB_LOGO_DATA_URI } from "@/assets/logo-inline";
 import duasAsset from "@/assets/duas.pdf.asset.json";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { AcademyTools } from "@/components/academy-tools";
@@ -106,7 +106,7 @@ export function TeamsApp() {
       {/* Title bar */}
       <div className="flex h-12 shrink-0 items-center gap-3 px-3 text-brand-foreground">
         <div className="flex items-center gap-2 pr-2">
-          <img src={logoAsset.url} alt="QuranHubb logo" className="h-6 w-6 object-contain" />
+          <img src={QURANHUBB_LOGO_DATA_URI} alt="QuranHubb logo" className="h-6 w-6 object-contain" />
           <span className="text-xs font-semibold">QuranHubb</span>
         </div>
         <div className="relative mx-auto hidden w-full max-w-md sm:block">
@@ -889,7 +889,7 @@ function CallsView() {
                   <Video className="h-10 w-10" />
                 ) : (
                   <img
-                    src={logoAsset.url}
+                    src={QURANHUBB_LOGO_DATA_URI}
                     alt="Academy"
                     className="h-24 w-24 rounded-full bg-card object-contain p-2"
                   />

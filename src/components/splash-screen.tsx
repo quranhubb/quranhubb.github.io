@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import logoAsset from "@/assets/quranhubb-logo.png.asset.json";
+import { QURANHUBB_LOGO_DATA_URI } from "@/assets/logo-inline";
 
 const LINES = [
   "We are setting things up for you...",
@@ -26,7 +26,7 @@ export function SplashScreen({ onDone }: { onDone: () => void }) {
       }`}
     >
       <img
-        src={logoAsset.url}
+        src={QURANHUBB_LOGO_DATA_URI}
         alt="Academy Logo"
         className="h-32 w-32 animate-logo-pulse object-contain"
       />

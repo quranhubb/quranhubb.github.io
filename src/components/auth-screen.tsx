@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import { AlertCircle, UserPlus } from "lucide-react";
-import logoAsset from "@/assets/quranhubb-logo.png.asset.json";
+import { QURANHUBB_LOGO_DATA_URI } from "@/assets/logo-inline";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
@@ -140,7 +140,7 @@ export function AuthScreen() {
     <main className="flex min-h-screen items-center justify-center bg-background px-4 py-10">
       <div className="w-full max-w-sm animate-rise">
         <div className="flex flex-col items-center">
-          <img src={logoAsset.url} alt="QuranHubb logo" className="h-20 w-20 object-contain" />
+          <img src={QURANHUBB_LOGO_DATA_URI} alt="QuranHubb logo" className="h-20 w-20 object-contain" />
           <h1 className="mt-4 text-xl font-semibold tracking-tight">QuranHubb</h1>
           <p className="mt-1 text-sm text-muted-foreground">
             {mode === "signin" ? "Sign in to continue" : "Create your account"}
@@ -360,7 +360,9 @@ function GoogleChooser({
             Choose an account
           </DialogTitle>
         </DialogHeader>
-        <p className="text-xs text-muted-foreground">to continue to QuranHubb</p>
+        <p className="text-xs text-muted-foreground">
+          to continue to QuranHubb — pick the Google account you want to use
+        </p>
 
         {GOOGLE_CLIENT_ID && <div id="gsi-button" className="mt-2 flex justify-center" />}
 
